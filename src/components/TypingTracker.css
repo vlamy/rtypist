@@ -1,0 +1,18 @@
+.rtypist__typing-tracker {
+  padding: 50px;
+  height: 300px;
+  width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #ccc;
+}
+
+textarea {
+  resize: none;
+  outline: none;
+  color: white;
+  border: white;
+  position: fixed;
+  font-size: 1px;
+  bottom: -1px;
+}

@@ -1,0 +1,24 @@
+.rtypist__typing-tracker__typed-character--to-go {
+  font-size: 35px;
+  display: inline;
+  color: grey;
+}
+
+.rtypist__typing-tracker__typed-character--current {
+  font-size: 35px;
+  display: inline;
+  text-decoration: underline;
+}
+
+.rtypist__typing-tracker__typed-character--success {
+  font-size: 35px;
+  display: inline;
+  color: green;
+}
+
+.rtypist__typing-tracker__typed-character--error {
+  font-size: 35px;
+  display: inline;
+  color: red;
+}
+
