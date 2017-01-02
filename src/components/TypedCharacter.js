@@ -8,32 +8,25 @@ import './TypedCharacter.css'
 */
 export default class TypedCharacter extends Component {
   className() {
-      return "rtypist__typing-tracker__typed-character--"+this.props.status;
+    let props = ['typed-character'];
+    props.push(`char-${this.props.status}`);
+
+    if(this.props.character === ' '){
+      props.push('char-space');
+    }
+    if(this.props.character === '\n'){
+      props.push('char-cr');
+    }
+    return props.join(' ');
   }
-  toHtml(){
-    const char = this.props.character;
-    if(char === ' '){
-      return (
-        <div className={this.className()}>
-          {' '}
-        </div>
-      );
-    }
-    if(char === '\n'){
-      return (
-        <div className={this.className()}>
-          {'¬'}
-          <br/>
-        </div>
-      );
-    }
-    return (
-      <div className={this.className()}>
-        {char}
-      </div>
-    );
+  character(){
+    return this.props.character;
   }
   render() {
-    return this.toHtml();
+    return (
+      <div className={this.className()}>
+        {this.character()}
+      </div>
+    );
   }
 }

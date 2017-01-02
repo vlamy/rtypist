@@ -1,37 +1,39 @@
-.rtypist__typing-tracker__typed-character--to-go {
+.typed-character {
   font-size: 35px;
   display: inline;
-  color: grey;
-  width: 22px;
   word-wrap: break-word;
 }
 
-.rtypist__typing-tracker__typed-character--current {
-  font-size: 35px;
-  display: inline;
+.char-to-go {
+  color: grey;
+}
+
+.char-current {
   color: #909090;
   /* background-color: #c6c6c6; */
   border-bottom: 3px solid #c6c6c6;
-  width: 22px;
-  word-wrap: break-word;
 }
 
-.rtypist__typing-tracker__typed-character--success {
-  font-size: 35px;
-  display: inline;
+.char-success {
   color: #5b7261;
   background-color: #bee0be;
-  /* border-bottom: 3px solid #bee0be; */
-  width: 22px;
-  word-wrap: break-word;
 }
 
-.rtypist__typing-tracker__typed-character--error {
-  font-size: 35px;
-  display: inline;
+.char-error {
   color: #842323;
   background-color: #dbadad;
-  width: 22px;
-  word-wrap: break-word;
 }
 
+.char-space {
+  border-bottom: 2px solid #dedede;
+  border-radius: 4px;
+}
+
+.char-cr:before {
+  color: #ababab;
+  font-size: 12px;
+  content: "↵";
+  position: relative;
+  left: 3px;
+  bottom: -1px;
+}
