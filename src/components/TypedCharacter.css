@@ -2,23 +2,36 @@
   font-size: 35px;
   display: inline;
   color: grey;
+  width: 22px;
+  word-wrap: break-word;
 }
 
 .rtypist__typing-tracker__typed-character--current {
   font-size: 35px;
   display: inline;
-  text-decoration: underline;
+  color: #909090;
+  /* background-color: #c6c6c6; */
+  border-bottom: 3px solid #c6c6c6;
+  width: 22px;
+  word-wrap: break-word;
 }
 
 .rtypist__typing-tracker__typed-character--success {
   font-size: 35px;
   display: inline;
-  color: green;
+  color: #5b7261;
+  background-color: #bee0be;
+  /* border-bottom: 3px solid #bee0be; */
+  width: 22px;
+  word-wrap: break-word;
 }
 
 .rtypist__typing-tracker__typed-character--error {
   font-size: 35px;
   display: inline;
-  color: red;
+  color: #842323;
+  background-color: #dbadad;
+  width: 22px;
+  word-wrap: break-word;
 }
 

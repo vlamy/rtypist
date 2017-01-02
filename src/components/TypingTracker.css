@@ -1,10 +1,12 @@
 .rtypist__typing-tracker {
   padding: 50px;
   height: 300px;
-  width: 900px;
+  width: 920px;
   margin-right: auto;
   margin-left: auto;
-  background-color: #ccc;
+  background-color: #ededed;
+  text-align: left;
+  white-space: pre-wrap;
 }
 
 textarea {

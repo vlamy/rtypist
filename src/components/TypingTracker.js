@@ -3,7 +3,7 @@ import TypedCharacter from './TypedCharacter';
 import TYPING_STATUS from '../constants/TYPING_STATUS';
 import './TypingTracker.css'
 
-const mockChars = 'il était une fois, dans un pays fort fort lointain{[]}(),./'.split('');
+const mockChars = `Il était une fois, dans un pays fort fort lointain une histoire de code :\nfunction iterate(array) {\n  let i=0;\n \n}`.split('');
 
 export default class TypingTracker extends Component {
   constructor() {

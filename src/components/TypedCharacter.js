@@ -10,11 +10,30 @@ export default class TypedCharacter extends Component {
   className() {
       return "rtypist__typing-tracker__typed-character--"+this.props.status;
   }
-  render() {
+  toHtml(){
+    const char = this.props.character;
+    if(char === ' '){
+      return (
+        <div className={this.className()}>
+          {' '}
+        </div>
+      );
+    }
+    if(char === '\n'){
+      return (
+        <div className={this.className()}>
+          {'¬'}
+          <br/>
+        </div>
+      );
+    }
     return (
       <div className={this.className()}>
-        {this.props.character}
+        {char}
       </div>
     );
+  }
+  render() {
+    return this.toHtml();
   }
 }
