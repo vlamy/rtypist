@@ -1,5 +1,7 @@
 # Warning : Work In Progress, highly unstable with few features
 
+[![Build Status](https://travis-ci.org/vlamy/rtypist.svg?branch=master)](https://travis-ci.org/vlamy/rtypist)
+
 R-Typist is intended to be a typist (tool to train your keyboard typing skills),
 designed with customizability and simplicity in mind.
 
