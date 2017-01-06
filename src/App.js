@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import TypingTracker from './components/TypingTracker'
+import ExerciseManager from './components/ExerciseManager'
 
 class App extends Component {
   render() {
@@ -9,7 +9,7 @@ class App extends Component {
         <div className="App-header">
           <h2>R-typist</h2>
         </div>
-        <TypingTracker />
+        <ExerciseManager />
       </div>
     );
   }

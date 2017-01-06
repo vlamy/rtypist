@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import TypedCharacter from './TypedCharacter';
-import TYPING_STATUS from '../constants/TYPING_STATUS';
+import TYPING_STATUS from '../../constants/TYPING_STATUS';
 import './TypingTracker.css'
 
-const mockChars = `Il était une fois, dans un pays fort fort lointain une histoire de code :\nfunction iterate(array) {\n  let i=0;\n \n}`.split('');
+const mockChars = `start :\n() {let i=0;}`.split('');
 
 export default class TypingTracker extends Component {
   constructor() {
@@ -72,6 +72,10 @@ export default class TypingTracker extends Component {
       lastInputValue: event.target.value,
       textCharacters: newCharsArray
     });
+
+    if(newContent.length === mockChars.length) {
+      this.props.endCallback();
+    }
   }
 
   render() {
