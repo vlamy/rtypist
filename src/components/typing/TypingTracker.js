@@ -3,15 +3,13 @@ import TypedCharacter from './TypedCharacter';
 import TYPING_STATUS from '../../constants/TYPING_STATUS';
 import './TypingTracker.css'
 
-const mockChars = `start :\n() {let i=0;}`.split('');
-
 export default class TypingTracker extends Component {
-  constructor() {
+  constructor(props) {
     super();
 
     this.state = {
       lastInputValue: '',
-      textCharacters: mockChars.map((char, index) => {
+      textCharacters: props.exercise.characters.map((char, index) => {
         if(index === 0) {
           return <TypedCharacter
             key={index}
@@ -47,9 +45,9 @@ export default class TypingTracker extends Component {
     let index = commonPrefix.length;
 
     /* Update what's new on input */
-    while(index < newContent.length && index < mockChars.length) {
+    while(index < newContent.length && index < this.props.exercise.length()) {
       let newKey = newContent.charAt(index);
-      let expectedChar = mockChars[index];
+      let expectedChar = this.props.exercise.charAt(index);
       let status = expectedChar === newKey ? TYPING_STATUS.success : TYPING_STATUS.error;
 
       newCharsArray[index] = <TypedCharacter
@@ -63,7 +61,7 @@ export default class TypingTracker extends Component {
     index = newContent.length; //assumes stop condition works
     newCharsArray[index] = <TypedCharacter
       key={index}
-      character={mockChars[index]}
+      character={this.props.exercise.charAt(index)}
       status={TYPING_STATUS.current}
     />;
 
@@ -73,7 +71,7 @@ export default class TypingTracker extends Component {
       textCharacters: newCharsArray
     });
 
-    if(newContent.length === mockChars.length) {
+    if(newContent.length === this.props.exercise.length()) {
       this.props.endCallback();
     }
   }
