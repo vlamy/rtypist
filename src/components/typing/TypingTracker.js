@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import TypedCharacter from './TypedCharacter';
 import TYPING_STATUS from '../../constants/TYPING_STATUS';
-import './TypingTracker.css'
+import './TypingTracker.css';
+import Statistics from '../statistics/Statistics';
+import TypingDashboard from '../statistics/TypingDashboard';
 
 export default class TypingTracker extends Component {
   constructor(props) {
@@ -9,6 +11,8 @@ export default class TypingTracker extends Component {
 
     this.state = {
       lastInputValue: '',
+      lastEventDate: new Date().getTime(),
+      statistics: new Statistics(props.exercise),
       textCharacters: props.exercise.characters.map((char, index) => {
         if(index === 0) {
           return <TypedCharacter
@@ -44,11 +48,14 @@ export default class TypingTracker extends Component {
     let newCharsArray = this.state.textCharacters.slice();
     let index = commonPrefix.length;
 
+    let success;
+
     /* Update what's new on input */
     while(index < newContent.length && index < this.props.exercise.length()) {
       let newKey = newContent.charAt(index);
       let expectedChar = this.props.exercise.charAt(index);
-      let status = expectedChar === newKey ? TYPING_STATUS.success : TYPING_STATUS.error;
+      success = expectedChar === newKey;
+      let status = success ? TYPING_STATUS.success : TYPING_STATUS.error;
 
       newCharsArray[index] = <TypedCharacter
         key={index}
@@ -65,9 +72,14 @@ export default class TypingTracker extends Component {
       status={TYPING_STATUS.current}
     />;
 
+    /* update statistics */
+    const now = new Date().getTime();
+    this.state.statistics.addKeyStroke(success, now - this.state.lastEventDate);
+
     /* updating state */
     this.setState({
       lastInputValue: event.target.value,
+      lastEventDate: now,
       textCharacters: newCharsArray
     });
 
@@ -80,6 +92,7 @@ export default class TypingTracker extends Component {
     return (
       <div className="rtypist__typing-tracker">
         {this.state.textCharacters}
+        <TypingDashboard statistics={this.state.statistics} />
         <textarea
           ref={textarea => textarea && textarea.focus() }
           type="text"
