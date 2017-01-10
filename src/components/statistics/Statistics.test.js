@@ -18,11 +18,11 @@ describe('Statistics', () => {
   });
 
   it('#getLiveProgress return the progress', () => {
-    expect(statistics.getLiveProgress()).toEqual(20);
+    expect(statistics.getLiveProgress()).toEqual("20.00");
   });
 
   it('#getLiveAccuracy return the accuracy', () => {
-    expect(statistics.getLiveAccuracy()).toEqual(40);
+    expect(statistics.getLiveAccuracy()).toEqual("40.00");
   });
 
   it('#getLiveErrorCount return the error count', () => {
@@ -30,14 +30,14 @@ describe('Statistics', () => {
   });
 
   it('#getLiveAverageStrokeLatency return the error count', () => {
-    expect(statistics.getLiveAverageStrokeLatency()).toEqual(500);
+    expect(statistics.getLiveAverageStrokeLatency()).toEqual("500.00");
   });
 
   it('#getLiveCharacterPerSecondAverage return the error count', () => {
-    expect(statistics.getLiveCharacterPerSecondAverage()).toEqual(2);
+    expect(statistics.getLiveCharacterPerSecondAverage()).toEqual("2.00");
   });
 
   it('#getLiveWordsPerMinuteAverage return the error count', () => {
-    expect(statistics.getLiveWordsPerMinuteAverage()).toEqual(24);
+    expect(statistics.getLiveWordsPerMinuteAverage()).toEqual("24.00");
   });
 });

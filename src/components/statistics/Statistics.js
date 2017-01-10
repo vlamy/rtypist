@@ -17,11 +17,11 @@ export default class Statistics {
   }
 
   getLiveProgress() {
-    return (this.nbCharactersTyped / this.nbTotalChars) * 100;
+    return parseFloat((this.nbCharactersTyped / this.nbTotalChars) * 100).toFixed(2);
   }
 
   getLiveAccuracy() {
-    return 100 - (this.errorCount / this.nbCharactersTyped) * 100;
+    return parseFloat(100 - (this.errorCount / this.nbCharactersTyped) * 100).toFixed(2);
   }
 
   getLiveErrorCount() {
@@ -29,14 +29,14 @@ export default class Statistics {
   }
 
   getLiveAverageStrokeLatency() {
-    return (this.latencySum / this.nbCharactersTyped);
+    return parseFloat((this.latencySum / this.nbCharactersTyped)).toFixed(2);
   }
 
   getLiveCharacterPerSecondAverage() {
-    return (1000 / this.getLiveAverageStrokeLatency());
+    return parseFloat((1000 / this.getLiveAverageStrokeLatency())).toFixed(2);
   }
 
   getLiveWordsPerMinuteAverage() {
-    return (this.getLiveCharacterPerSecondAverage() / AVERAGE_WORD_LENGTH) * 60;
+    return parseFloat((this.getLiveCharacterPerSecondAverage() / AVERAGE_WORD_LENGTH) * 60).toFixed(2);
   }
 }
