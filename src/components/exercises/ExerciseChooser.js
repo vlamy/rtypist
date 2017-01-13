@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Exercise from './Exercise';
+import './ExerciseChooser.css';
 
 const exercises = [
   new Exercise(
@@ -22,11 +23,13 @@ export default class ExerciseChooser extends Component {
       <div className="ExerciseChooser">
         {
           exercises.map((exercise, index) => {
-            return <button
-              id="index"
-              key={`exo${index}`}
-              onClick={() => this.props.handleExerciseChoice(exercises[index])}
-            >{exercise.title}</button>;
+            return (
+            <input type="button"
+                key={`exo${index}`}
+                value={exercise.title}
+                onClick={() => this.props.handleExerciseChoice(exercises[index])}>
+            </input>
+            )
           })
         }
       </div>
