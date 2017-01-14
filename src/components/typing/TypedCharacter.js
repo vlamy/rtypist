@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './TypedCharacter.css';
+import './TypedCharacter.sass';
 
 /**
  * A component to render a character to type, with different style

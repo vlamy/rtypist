@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TypedCharacter from './TypedCharacter';
 import TYPING_STATUS from '../../constants/TYPING_STATUS';
-import './TypingTracker.css';
+import './TypingTracker.sass';
 import Statistics from '../statistics/Statistics';
 import TypingDashboard from '../statistics/TypingDashboard';
 

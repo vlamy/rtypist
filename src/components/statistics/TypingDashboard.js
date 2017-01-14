@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './TypingDashboard.css';
+import './TypingDashboard.sass';
 
 /**
 */

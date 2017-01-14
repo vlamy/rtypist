@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Exercise from './Exercise';
-import './ExerciseChooser.css';
+import './ExerciseChooser.sass';
 
 const exercises = [
   new Exercise(
