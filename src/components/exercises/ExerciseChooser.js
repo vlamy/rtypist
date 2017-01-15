@@ -2,8 +2,16 @@ import React, { Component } from 'react';
 import Exercise from './Exercise';
 import './ExerciseChooser.sass';
 
-const data = require('../../../config/exercises/basic.json')
-const exercises = [new Exercise(data)];
+const basic = require('../../../config/exercises/basic.json')
+const javascript = require('../../../config/exercises/javascript.json')
+const java = require('../../../config/exercises/java.json')
+const ruby = require('../../../config/exercises/ruby.json')
+const exercises = [
+    new Exercise(basic),
+    new Exercise(javascript),
+    new Exercise(java),
+    new Exercise(ruby)
+];
 
 export default class ExerciseChooser extends Component {
   render() {
@@ -15,7 +23,7 @@ export default class ExerciseChooser extends Component {
             <button
                 key={`exo${index}`}
                 onClick={() => this.props.handleExerciseChoice(exercises[index])}>
-                {exercise.title}
+                {exercise.title()}
             </button>
             )
           })

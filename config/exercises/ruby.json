@@ -1,0 +1,8 @@
+{
+  "exercise": {
+    "title": "Basic ruby",
+    "tags": ["code", "ruby", "easy"],
+    "desription": "A good exercise for testing the typist",
+    "text": "def length(str)\n  str.length\nend"
+  }
+}
