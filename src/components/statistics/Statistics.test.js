@@ -1,7 +1,8 @@
 import Statistics from './Statistics';
 import Exercise from '../exercises/Exercise';
 
-const exercise = new Exercise('stats-test', 'asdflhqueoeuthfaljasuhfue');
+const data = require('../../../config/exercises/basic.json')
+const exercise = new Exercise(data);
 let statistics;
 
 describe('Statistics', () => {
@@ -18,7 +19,7 @@ describe('Statistics', () => {
   });
 
   it('#getLiveProgress return the progress', () => {
-    expect(statistics.getLiveProgress()).toEqual("20.00");
+    expect(statistics.getLiveProgress()).toEqual("29.41");
   });
 
   it('#getLiveAccuracy return the accuracy', () => {

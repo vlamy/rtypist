@@ -2,20 +2,8 @@ import React, { Component } from 'react';
 import Exercise from './Exercise';
 import './ExerciseChooser.sass';
 
-const exercises = [
-  new Exercise(
-    'basic',
-    'pom pom pidou !\n Whoo !'
-  ),
-  new Exercise(
-    'poignant guide',
-    'The book is unusual among programming books in that it includes quite a lot of strange humor and narrative side tracks which are sometimes completely unrelated to the topic.'
-  ),
-  new Exercise(
-    'code',
-    'export default class Exercise {\n constructor(title, text) {\n this.title = title;\n this.text = text;\n }\n}'
-  )
-];
+const data = require('../../../config/exercises/basic.json')
+const exercises = [new Exercise(data)];
 
 export default class ExerciseChooser extends Component {
   render() {

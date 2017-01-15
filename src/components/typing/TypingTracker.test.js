@@ -5,7 +5,8 @@ import ReactTestUtils from 'react-addons-test-utils';
 import Exercise from '../exercises/Exercise';
 
 const divClassName = 'rtypist__typing-tracker';
-const exercise = new Exercise('stats-test', 'asdflhqueoeuthfaljasuhfue');
+const data = require('../../../config/exercises/basic.json')
+const exercise = new Exercise(data);
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
