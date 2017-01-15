@@ -24,11 +24,11 @@ export default class ExerciseChooser extends Component {
         {
           exercises.map((exercise, index) => {
             return (
-            <input type="button"
+            <button
                 key={`exo${index}`}
-                value={exercise.title}
                 onClick={() => this.props.handleExerciseChoice(exercises[index])}>
-            </input>
+                {exercise.title}
+            </button>
             )
           })
         }
