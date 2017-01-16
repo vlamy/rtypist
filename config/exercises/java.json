@@ -3,6 +3,6 @@
     "title": "Basic java",
     "tags": ["code", "java", "easy"],
     "desription": "A good exercise for testing the typist",
-    "text": "public static void main(String[] args) {\n  System.out.println(args.length());\n}"
+    "text": "public static void methodWithAnyLongName(String[] args) {\n  System.out.println(args.length());\n}"
   }
 }

@@ -6,10 +6,12 @@ const basic = require('../../../config/exercises/basic.json')
 const javascript = require('../../../config/exercises/javascript.json')
 const java = require('../../../config/exercises/java.json')
 const ruby = require('../../../config/exercises/ruby.json')
+const long = require('../../../config/exercises/long.json')
 const exercises = [
     new Exercise(basic),
     new Exercise(javascript),
     new Exercise(java),
+    new Exercise(long),
     new Exercise(ruby)
 ];
 
