@@ -31,6 +31,7 @@ export default class TypingTracker extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.commonPrefix = this.commonPrefix.bind(this);
+    this._renderLines = this._renderLines.bind(this);
   }
 
   commonPrefix(stringFoo, stringBar) {
@@ -87,11 +88,22 @@ export default class TypingTracker extends Component {
       this.props.endCallback();
     }
   }
+  _renderLines() {
+    return this.props.exercise.lines.map((line, lindex) => {
+      return (
+        <div className="rtypist__typing-tracker__line" key={lindex}>
+          {line.map((index) => {
+            return this.state.textCharacters[index]
+          })}
+        </div>
+      );
+      });
+  }
 
   render() {
     return (
       <div className="rtypist__typing-tracker">
-        {this.state.textCharacters}
+        {this._renderLines()}
         <TypingDashboard statistics={this.state.statistics} />
         <textarea
           ref={textarea => textarea && textarea.focus() }
