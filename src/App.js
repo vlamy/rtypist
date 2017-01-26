@@ -5,7 +5,7 @@ import ExerciseManager from './components/ExerciseManager'
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="rtypist">
         <ExerciseManager />
       </div>
     );

@@ -97,7 +97,7 @@ export default class TypingTracker extends Component {
   _renderLines() {
     return this.props.exercise.lines.map((line, lindex) => {
       return (
-        <div className="rtypist__typing-tracker__line" key={lindex}>
+        <div className="rtypist__exercise-manager__typing-tracker__text__line" key={lindex}>
           {line.map((index) => {
             return this.state.textCharacters[index]
           })}
@@ -108,9 +108,9 @@ export default class TypingTracker extends Component {
 
   render() {
     return (
-        <div className="rtypist__typing-tracker">
+        <div className="rtypist__exercise-manager__typing-tracker">
             <TypingDashboard statistics={this.state.statistics} />
-            <div className="rtypist__typing-tracker__text"
+            <div className="rtypist__exercise-manager__typing-tracker__text"
                 ref={(div) => { this.textDiv = div; }}>
                 {this._renderLines()}
             </div>

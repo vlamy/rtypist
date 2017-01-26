@@ -6,8 +6,8 @@ import './TypingDashboard.sass';
 export default class TypingDashboard extends Component {
     render() {
         return (
-            <div className="typing-dashboard">
-                <div className="statext">
+            <div className="rtypist__exercise-manager__typing-tracker__typing-dashboard">
+                <div className="rtypist__exercise-manager__typing-tracker__typing-dashboard__statext">
                     <div className="stats-txt accuracy">
                         <p>Accuracy : {this.props.statistics.getLiveAccuracy()}%</p>
                     </div>

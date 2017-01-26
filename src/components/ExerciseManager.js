@@ -37,7 +37,7 @@ export default class ExerciseManager extends Component {
 
   render() {
     return (
-      <div className="ExerciseManager">
+      <div className="rtypist__exercise-manager">
         {this.conditionnalRender()}
       </div>
     );

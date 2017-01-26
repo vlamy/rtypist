@@ -8,7 +8,7 @@ import './TypedCharacter.sass';
 */
 export default class TypedCharacter extends Component {
   className() {
-    let props = ['typed-character'];
+    let props = ['rtypist__exercise-manager__typing-tracker__text__line__typed-character'];
     props.push(`char-${this.props.status}`);
 
     if(this.props.character === ' '){

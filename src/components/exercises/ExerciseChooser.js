@@ -25,7 +25,7 @@ const exercises = [
 export default class ExerciseChooser extends Component {
   render() {
     return (
-      <div className="ExerciseChooser">
+      <div className="rtypist__exercise-manager__exercise-chooser">
         {
           exercises.map((exercise, index) => {
             return (
