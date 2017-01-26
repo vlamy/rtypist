@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import ExerciseManager from './ExerciseManager';
 import ReactTestUtils from 'react-addons-test-utils';
 
-const divClassName = 'ExerciseManager';
+const divClassName = 'rtypist__exercise-manager';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');

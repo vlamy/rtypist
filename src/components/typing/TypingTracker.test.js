@@ -4,7 +4,7 @@ import TypingTracker from './TypingTracker';
 import ReactTestUtils from 'react-addons-test-utils';
 import Exercise from '../exercises/Exercise';
 
-const divClassName = 'rtypist__typing-tracker';
+const divClassName = 'rtypist__exercise-manager__typing-tracker';
 const data = require('../../../config/exercises/basic.json')
 const exercise = new Exercise(data);
 

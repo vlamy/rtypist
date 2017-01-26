@@ -23,7 +23,7 @@ it('renders a classic character with status to-go', () => {
 
     expect(result.type).toBe('div');
     expect(result.props.children).toEqual('c');
-    expect(result.props.className).toEqual('typed-character char-to-go');
+    expect(result.props.className).toEqual('rtypist__exercise-manager__typing-tracker__text__line__typed-character char-to-go');
 });
 
 it('renders a classic character with status current', () => {
@@ -37,7 +37,7 @@ it('renders a classic character with status current', () => {
 
     expect(result.type).toBe('div');
     expect(result.props.children).toEqual('c');
-    expect(result.props.className).toEqual('typed-character char-current');
+    expect(result.props.className).toEqual('rtypist__exercise-manager__typing-tracker__text__line__typed-character char-current');
 });
 
 it('renders a classic character with status error', () => {
@@ -51,7 +51,7 @@ it('renders a classic character with status error', () => {
 
     expect(result.type).toBe('div');
     expect(result.props.children).toEqual('c');
-    expect(result.props.className).toEqual('typed-character char-error');
+    expect(result.props.className).toEqual('rtypist__exercise-manager__typing-tracker__text__line__typed-character char-error');
 });
 
 it('renders a classic character with status success', () => {
@@ -65,7 +65,7 @@ it('renders a classic character with status success', () => {
 
     expect(result.type).toBe('div');
     expect(result.props.children).toEqual('c');
-    expect(result.props.className).toEqual('typed-character char-success');
+    expect(result.props.className).toEqual('rtypist__exercise-manager__typing-tracker__text__line__typed-character char-success');
 });
 
 it('renders a space character with special classname', () => {
@@ -79,7 +79,7 @@ it('renders a space character with special classname', () => {
 
     expect(result.type).toBe('div');
     expect(result.props.children).toEqual(' ');
-    expect(result.props.className).toEqual('typed-character char-success char-space');
+    expect(result.props.className).toEqual('rtypist__exercise-manager__typing-tracker__text__line__typed-character char-success char-space');
 });
 
 it('renders a line break with special classname', () => {
@@ -94,5 +94,5 @@ it('renders a line break with special classname', () => {
 
     expect(result.type).toBe('div');
     expect(result.props.children).toEqual('\n');
-    expect(result.props.className).toEqual('typed-character char-success char-cr');
+    expect(result.props.className).toEqual('rtypist__exercise-manager__typing-tracker__text__line__typed-character char-success char-cr');
 });
