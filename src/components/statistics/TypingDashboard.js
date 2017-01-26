@@ -7,9 +7,6 @@ export default class TypingDashboard extends Component {
     render() {
         return (
             <div className="typing-dashboard">
-                <div className="meter">
-                    <span style={{ width: `${this.props.statistics.getLiveProgress()}%` }}></span>
-                </div>
                 <div className="statext">
                     <div className="stats-txt accuracy">
                         <p>Accuracy : {this.props.statistics.getLiveAccuracy()}%</p>

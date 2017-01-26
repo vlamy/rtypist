@@ -4,6 +4,7 @@ import TYPING_STATUS from '../../constants/TYPING_STATUS';
 import './TypingTracker.sass';
 import Statistics from '../statistics/Statistics';
 import TypingDashboard from '../statistics/TypingDashboard';
+import ProgressBar from '../statistics/ProgressBar';
 
 export default class TypingTracker extends Component {
   constructor(props) {
@@ -73,6 +74,11 @@ export default class TypingTracker extends Component {
       status={TYPING_STATUS.current}
     />;
 
+    //TODO: should work with lines
+    if (index > 31 && index % 31 === 0 ) {
+      this.textDiv.scrollTop += 70;
+    }
+
     /* update statistics */
     const now = new Date().getTime();
     this.state.statistics.addKeyStroke(success, now - this.state.lastEventDate);
@@ -102,17 +108,21 @@ export default class TypingTracker extends Component {
 
   render() {
     return (
-      <div className="rtypist__typing-tracker">
-        {this._renderLines()}
-        <TypingDashboard statistics={this.state.statistics} />
-        <textarea
-          ref={textarea => textarea && textarea.focus() }
-          type="text"
-          autoComplete="off"
-          onInput={this.handleChange}
-          autoFocus
-        />
-      </div>
+        <div className="rtypist__typing-tracker">
+            <TypingDashboard statistics={this.state.statistics} />
+            <div className="rtypist__typing-tracker__text"
+                ref={(div) => { this.textDiv = div; }}>
+                {this._renderLines()}
+            </div>
+            <ProgressBar statistics={this.state.statistics} />
+            <textarea
+                ref={textarea => textarea && textarea.focus() }
+                type="text"
+                autoComplete="off"
+                onInput={this.handleChange}
+                autoFocus
+            />
+        </div>
     );
   }
 }
