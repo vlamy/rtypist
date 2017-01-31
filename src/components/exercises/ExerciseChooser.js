@@ -10,6 +10,7 @@ const long = require('../../../config/exercises/long.json')
 const kaamelottAnna1 = require('../../../config/exercises/kaamelott-anna1.json')
 const kaamelottGoustan1 = require('../../../config/exercises/kaamelott-goustan1.json')
 const kaamelottPerceval1 = require('../../../config/exercises/kaamelott-perceval1.json')
+const trigramme1 = require('../../../config/exercises/trigramme-fr-1.json')
 
 const exercises = [
     new Exercise(basic),
@@ -19,6 +20,7 @@ const exercises = [
     new Exercise(kaamelottAnna1),
     new Exercise(kaamelottGoustan1),
     new Exercise(kaamelottPerceval1),
+    new Exercise(trigramme1),
     new Exercise(ruby)
 ];
 

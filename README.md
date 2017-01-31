@@ -22,5 +22,12 @@ designed with customizability and simplicity in mind.
 ## Tooling
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+## Text sources
+### Français
+
+* https://fr.wikipedia.org/wiki/Pangramme
+* https://fr.wikipedia.org/wiki/H%C3%A9t%C3%A9rogramme
+* https://bepo.fr/wiki/Exercices
+
 ## BSD 3-Clause License
 See [LICENSE](https://github.com/vlamy/rtypist/blob/master/LICENSE) file for details.
