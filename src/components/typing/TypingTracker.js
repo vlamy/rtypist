@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import TypedCharacter from './TypedCharacter';
-import TYPING_STATUS from '../../constants/TYPING_STATUS';
 import './TypingTracker.sass';
 import Statistics from '../statistics/Statistics';
 import TypingDashboard from '../statistics/TypingDashboard';
@@ -11,95 +10,50 @@ export default class TypingTracker extends Component {
     super();
 
     this.state = {
-      lastInputValue: '',
       lastEventDate: new Date().getTime(),
-      statistics: new Statistics(props.exercise),
-      textCharacters: props.exercise.characters.map((char, index) => {
-        if(index === 0) {
-          return <TypedCharacter
-            key={index}
-            character={char}
-            status={TYPING_STATUS.current}
-            />;
-        }
-        return <TypedCharacter
-          key={index}
-          character={char}
-          status={TYPING_STATUS.togo}
-          />;
-      }),
+      statistics: new Statistics(props.exercise)
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.commonPrefix = this.commonPrefix.bind(this);
     this._renderLines = this._renderLines.bind(this);
   }
 
-  commonPrefix(stringFoo, stringBar) {
-      const maxLength = stringFoo.length;
-      let i= 0;
-      while(i<maxLength && stringFoo.charAt(i)=== stringBar.charAt(i)) i++;
-      return stringFoo.substring(0, i);
+  onNewLine() {
+    this.textDiv.scrollTop += 70;
   }
 
   handleChange(event) {
     const newContent = event.target.value;
-    const commonPrefix = this.commonPrefix(newContent, this.state.lastInputValue);
-
-    /* Preserve state immutability by copying the array */
-    let newCharsArray = this.state.textCharacters.slice();
-    let index = commonPrefix.length;
-
-    let success;
-
-    /* Update what's new on input */
-    while(index < newContent.length && index < this.props.exercise.length()) {
-      let newKey = newContent.charAt(index);
-      let expectedChar = this.props.exercise.charAt(index);
-      success = expectedChar === newKey;
-      let status = success ? TYPING_STATUS.success : TYPING_STATUS.error;
-
-      newCharsArray[index] = <TypedCharacter
-        key={index}
-        character={expectedChar}
-        status={status}
-      />;
-      index++;
-    }
-
-    index = newContent.length; //assumes stop condition works
-    newCharsArray[index] = <TypedCharacter
-      key={index}
-      character={this.props.exercise.charAt(index)}
-      status={TYPING_STATUS.current}
-    />;
+    const index = this.props.exercise.handleInputEvent(newContent);
 
     //TODO: should work with lines
     if (index > 31 && index % 31 === 0 ) {
-      this.textDiv.scrollTop += 70;
+      this.onNewLine();
     }
 
     /* update statistics */
     const now = new Date().getTime();
-    this.state.statistics.addKeyStroke(success, now - this.state.lastEventDate);
+    // const latency = now - this.state.lastEventDate;
+    //this.state.statistics.addKeyStroke(success, latency);
 
     /* updating state */
     this.setState({
-      lastInputValue: event.target.value,
-      lastEventDate: now,
-      textCharacters: newCharsArray
+      lastEventDate: now
     });
 
-    if(newContent.length === this.props.exercise.length()) {
+    if(newContent.length === this.props.exercise.getLength()) {
       this.props.endCallback();
     }
   }
   _renderLines() {
-    return this.props.exercise.lines.map((line, lindex) => {
+    return this.props.exercise.getLines().map((line, lindex) => {
       return (
         <div className="rtypist__exercise-manager__typing-tracker__text__line" key={lindex}>
           {line.map((index) => {
-            return this.state.textCharacters[index]
+              return <TypedCharacter
+                  key={index}
+                  character={this.props.exercise.getCharacters()[index]}
+              />
           })}
         </div>
       );

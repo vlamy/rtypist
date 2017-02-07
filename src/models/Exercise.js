@@ -58,6 +58,14 @@ export default class Exercise {
     }
   }
 
+  getCharacters() {
+    return this.characters;
+  }
+
+  getLines() {
+    return this.lines;
+  }
+
   getDescription() {
     return this.exercise.description || 'No description for this exercise';
   }
@@ -105,8 +113,11 @@ export default class Exercise {
     if (this._currentCharacter ) {
       this._currentCharacter.unsetCurrentCharacterFlag();
     }
-    this._currentCharacter = this.characters[index - 1];
-    this._currentCharacter.setCurrentCharacterFlag();
+
+    if (this.characters[index]) {
+      this._currentCharacter = this.characters[index];
+      this._currentCharacter.setCurrentCharacterFlag();
+    }
   }
 
   _commonPrefix(input) {

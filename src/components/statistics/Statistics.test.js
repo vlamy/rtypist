@@ -1,5 +1,5 @@
 import Statistics from './Statistics';
-import Exercise from '../exercises/Exercise';
+import Exercise from '../../models/Exercise';
 
 const data = require('../../../config/exercises/basic.json')
 const exercise = new Exercise(data);

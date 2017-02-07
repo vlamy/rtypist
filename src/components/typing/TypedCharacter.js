@@ -8,25 +8,23 @@ import './TypedCharacter.sass';
 */
 export default class TypedCharacter extends Component {
   className() {
-    let props = ['rtypist__exercise-manager__typing-tracker__text__line__typed-character'];
-    props.push(`char-${this.props.status}`);
+    const prefix = ['rtypist__manager__tracker__text__line__character'];
+    const character = this.props.character.getCharToDisplay();
 
-    if(this.props.character === ' '){
-      props.push('char-space');
+    if (character === ' ') {
+      return `${prefix}__space`;
     }
-    if(this.props.character === '\n'){
-      props.push('char-cr');
+    if (character === '\n') {
+      return `${prefix}__cr`;
     }
-    return props.join(' ');
+    return `${prefix}__regular`;
   }
-  character(){
-    return this.props.character;
-  }
+
   render() {
     return (
-      <div className={this.className()}>
-        {this.character()}
-      </div>
+            <div className={`${this.className()} ${this.className()}--${this.props.character.getStatus()}`}>
+                {this.props.character.getCharToDisplay()}
+            </div>
     );
   }
 }

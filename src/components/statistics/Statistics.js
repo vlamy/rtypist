@@ -2,7 +2,7 @@ const AVERAGE_WORD_LENGTH = 5;
 
 export default class Statistics {
   constructor(exercise) {
-    this.nbTotalChars = exercise.length();
+    this.nbTotalChars = exercise.getLength();
     this.errorCount = 0;
     this.nbCharactersTyped = 0;
     this.latencySum = 0;

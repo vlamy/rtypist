@@ -278,7 +278,7 @@ describe('utils/Exercise', () => {
         expect(exercise.characters[2].lastTypedValue).toEqual(' ');
       });
 
-      it('puts carriage return character as success', () => {
+      it('puts carriage return character as current', () => {
         expect(exercise.characters[8].getStatus()).toEqual(TYPING_STATUS.success);
         expect(exercise.characters[8].lastTypedValue).toEqual(cr);
       });

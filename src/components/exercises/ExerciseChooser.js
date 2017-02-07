@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Exercise from './Exercise';
+import Exercise from '../../models/Exercise';
 import './ExerciseChooser.sass';
 
 const basic = require('../../../config/exercises/basic.json')
@@ -34,7 +34,7 @@ export default class ExerciseChooser extends Component {
             <button
                 key={`exo${index}`}
                 onClick={() => this.props.handleExerciseChoice(exercises[index])}>
-                {exercise.title()}
+                {exercise.getTitle()}
             </button>
             )
           })

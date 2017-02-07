@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import TypingTracker from './TypingTracker';
 import ReactTestUtils from 'react-addons-test-utils';
-import Exercise from '../exercises/Exercise';
+import Exercise from '../../models/Exercise';
 
 const divClassName = 'rtypist__exercise-manager__typing-tracker';
 const data = require('../../../config/exercises/basic.json')

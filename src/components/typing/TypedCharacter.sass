@@ -1,6 +1,8 @@
 @import ../../base
 
-.rtypist__exercise-manager__typing-tracker__text__line__typed-character
+.rtypist__manager__tracker__text__line__character__regular,
+.rtypist__manager__tracker__text__line__character__space,
+.rtypist__manager__tracker__text__line__character__cr
   font-family: 'Droid Sans Mono', courier
   margin-left: 5px
   font-size: 40px
@@ -9,16 +11,16 @@
   word-wrap: break-word
   border-radius: 5px
 
-.char-current
-  text-decoration: underline
+  &--current
+    text-decoration: underline
 
-.char-success
-  color: $oxley
-  background-color: $black-bean
+  &--success
+    color: $oxley
+    background-color: $black-bean
 
-.char-error
-  color: $turkish-rose
-  background-color: $heath
+  &--error
+    color: $turkish-rose
+    background-color: $heath
 
 .char-cr:before
   font-size: 12px
