@@ -16,6 +16,7 @@ export default class TypingTracker extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this._renderLines = this._renderLines.bind(this);
+    this.onNewLine = this.onNewLine.bind(this);
   }
 
   onNewLine() {

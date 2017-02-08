@@ -118,6 +118,8 @@ export default class Exercise {
       this._currentCharacter = this.characters[index];
       this._currentCharacter.setCurrentCharacterFlag();
     }
+
+    return index;
   }
 
   _commonPrefix(input) {
