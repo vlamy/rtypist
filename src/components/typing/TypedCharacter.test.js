@@ -52,7 +52,7 @@ it('renders a classic character with status error', () => {
   const result = renderer.getRenderOutput();
 
   expect(result.type).toBe('div');
-  expect(result.props.children).toEqual('v');
+  expect(result.props.children).toEqual('c');
   expect(result.props.className).toEqual('rtypist__manager__tracker__text__line__character__regular rtypist__manager__tracker__text__line__character__regular--error');
 });
 

@@ -65,7 +65,7 @@ describe('utils/Character', () => {
       });
 
       it('return the typed character', () => {
-        expect(character.getCharToDisplay()).toEqual('b');
+        expect(character.getCharToDisplay()).toEqual('a');
       });
     });
   });

@@ -24,7 +24,7 @@ export default class Character {
   }
 
   getCharToDisplay() {
-    return this.lastTypedValue ? this.lastTypedValue : this.reference;
+    return this.reference;
   }
 
   setLastTypedValue(value) {
