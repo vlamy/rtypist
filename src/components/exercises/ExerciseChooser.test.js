@@ -12,9 +12,9 @@ it('renders without crashing', () => {
 
 
 it(`renders a div with class ${divClassName} `, () => {
-    const renderer = ReactTestUtils.createRenderer();
-    renderer.render(<ExerciseChooser />);
-    const result = renderer.getRenderOutput();
-    expect(result.type).toBe('div');
-    expect(result.props.className).toEqual(divClassName);
+  const renderer = ReactTestUtils.createRenderer();
+  renderer.render(<ExerciseChooser />);
+  const result = renderer.getRenderOutput();
+  expect(result.type).toBe('div');
+  expect(result.props.className).toEqual(divClassName);
 });

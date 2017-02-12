@@ -3,4 +3,4 @@ module.exports = {
   current: 'current',
   error: 'error',
   success: 'success'
-}
+};

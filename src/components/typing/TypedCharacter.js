@@ -22,9 +22,9 @@ export default class TypedCharacter extends Component {
 
   render() {
     return (
-            <div className={`${this.className()} ${this.className()}--${this.props.character.getStatus()}`}>
-                {this.props.character.getCharToDisplay()}
-            </div>
+      <div className={`${this.className()} ${this.className()}--${this.props.character.getStatus()}`}>
+        {this.props.character.getCharToDisplay()}
+      </div>
     );
   }
 }

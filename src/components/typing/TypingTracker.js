@@ -27,7 +27,7 @@ export default class TypingTracker extends Component {
     const newContent = event.target.value;
     const index = this.props.exercise.handleInputEvent(newContent);
 
-    //TODO: should work with lines
+    //TODO: should work with lines
     if (index > 31 && index % 31 === 0 ) {
       this.onNewLine();
     }
@@ -51,14 +51,14 @@ export default class TypingTracker extends Component {
       return (
         <div className="rtypist__exercise-manager__typing-tracker__text__line" key={lindex}>
           {line.map((index) => {
-              return <TypedCharacter
+            return <TypedCharacter
                   key={index}
                   character={this.props.exercise.getCharacters()[index]}
-              />
+              />;
           })}
         </div>
       );
-      });
+    });
   }
 
   render() {

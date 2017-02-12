@@ -21,6 +21,7 @@
     "eslint-loader": "1.6.0",
     "eslint-plugin-flowtype": "2.21.0",
     "eslint-plugin-import": "2.0.1",
+    "eslint-plugin-jasmine": "^2.2.0",
     "eslint-plugin-jsx-a11y": "2.2.3",
     "eslint-plugin-react": "^6.4.1",
     "extract-text-webpack-plugin": "1.0.1",
@@ -56,6 +57,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "lint": "eslint src/",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
@@ -86,8 +88,5 @@
     "presets": [
       "react-app"
     ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   }
 }

@@ -2,13 +2,13 @@ import Character from './Character';
 
 /**
  *data = {
- *  "exercise": {
- *     "title": "Title of the exercise",
- *     "tags": ["tag1", "tag2"],
- *     "locale": "fr",
- *     "description": "Sentence describing the exercise",
- *     "text": "The text to type potentially containing carriage return",
- *     "source": "The text source"
+ *  exercise: {
+ *     title: "Title of the exercise",
+ *     tags: ["tag1", "tag2"],
+ *     locale: "fr",
+ *     description: "Sentence describing the exercise",
+ *     text: "The text to type potentially containing carriage return",
+ *     source: "The text source"
  *     }
  *}
  * */
@@ -54,7 +54,7 @@ export default class Exercise {
     }
 
     if(currentLineChars.length > 0) {
-        lines.push(currentLineChars);
+      lines.push(currentLineChars);
     }
   }
 
@@ -123,8 +123,8 @@ export default class Exercise {
   }
 
   _commonPrefix(input) {
-      let i= 0;
-      while (i < this.textLength && this.characters[i].expectedChar === input.charAt(i) ) i++;
-      return this.exercise.text.substring(0, i);
+    let i= 0;
+    while (i < this.textLength && this.characters[i].expectedChar === input.charAt(i) ) i++;
+    return this.exercise.text.substring(0, i);
   }
 }

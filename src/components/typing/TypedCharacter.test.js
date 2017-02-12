@@ -23,7 +23,7 @@ it('renders a classic character with status to-go', () => {
 
   expect(result.type).toBe('div');
   expect(result.props.children).toEqual('c');
-    expect(result.props.className).toEqual('rtypist__manager__tracker__text__line__character__regular rtypist__manager__tracker__text__line__character__regular--to-go');
+  expect(result.props.className).toEqual('rtypist__manager__tracker__text__line__character__regular rtypist__manager__tracker__text__line__character__regular--to-go');
 });
 
 it('renders a classic character with status current', () => {

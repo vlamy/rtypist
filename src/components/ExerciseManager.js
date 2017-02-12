@@ -14,7 +14,6 @@ export default class ExerciseManager extends Component {
   }
 
   handleExerciseEnd(){
-    console.log("this is the end !");
     this.setState({
       currentExercise: null
     });
@@ -28,10 +27,10 @@ export default class ExerciseManager extends Component {
 
   conditionnalRender() {
     if(this.state.currentExercise) {
-      return <TypingTracker exercise={this.state.currentExercise} endCallback={this.handleExerciseEnd}/>
+      return <TypingTracker exercise={this.state.currentExercise} endCallback={this.handleExerciseEnd}/>;
     }
     else {
-      return <ExerciseChooser handleExerciseChoice={this.handleExerciseChoice}/>
+      return <ExerciseChooser handleExerciseChoice={this.handleExerciseChoice}/>;
     }
   }
 

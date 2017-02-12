@@ -5,38 +5,38 @@ describe('utils/Exercise', () => {
   let exercise;
   const cr = '\n';
 
-    const basicData = {
-        "exercise": {
-            "title": "Basic exercise",
-            "tags": ["fr", "easy"],
-            "desription": "A good exercise for testing the typist",
-            "text": "Il était une fois"
-        }
-    };
-    const rubyData = {
-        "exercise": {
-            "title": "Basic ruby",
-            "tags": ["code", "ruby", "easy"],
-            "desription": "A good exercise for testing the typist",
-            "text": "def length(str)\n  str.length\nend"
-        }
-    };
-    const longData = {
-        "exercise": {
-            "title": "Long text exercise",
-            "tags": ["long", "test"],
-            "desription": "A good exercise for testing the typist",
-            "text": "il était une fois un exercice dont la longueur était supérieur au double de la longueur minimale requise pour par ligne"
-        }
-    };
-    const javaData = {
-        "exercise": {
-            "title": "Long coding exercise",
-            "tags": ["long", "test"],
-            "desription": "A good exercise for testing the typist",
-            "text": "public static void anyMethodWithLongName(String arg1, String arg2) {\n System.out.println(\"Hello Dude !\");\n}"
-        }
-    };
+  const basicData = {
+    'exercise': {
+      'title': 'Basic exercise',
+      'tags': ['fr', 'easy'],
+      'desription': 'A good exercise for testing the typist',
+      'text': 'Il était une fois'
+    }
+  };
+  const rubyData = {
+    'exercise': {
+      'title': 'Basic ruby',
+      'tags': ['code', 'ruby', 'easy'],
+      'desription': 'A good exercise for testing the typist',
+      'text': 'def length(str)\n  str.length\nend'
+    }
+  };
+  const longData = {
+    'exercise': {
+      'title': 'Long text exercise',
+      'tags': ['long', 'test'],
+      'desription': 'A good exercise for testing the typist',
+      'text': 'il était une fois un exercice dont la longueur était supérieur au double de la longueur minimale requise pour par ligne'
+    }
+  };
+  const javaData = {
+    'exercise': {
+      'title': 'Long coding exercise',
+      'tags': ['long', 'test'],
+      'desription': 'A good exercise for testing the typist',
+      'text': 'public static void anyMethodWithLongName(String arg1, String arg2) {\n System.out.println(\'Hello Dude !\');\n}'
+    }
+  };
 
   describe('#constructor', () => {
     beforeEach(() => {
@@ -161,7 +161,7 @@ describe('utils/Exercise', () => {
       });
 
       it('returns text title', () => {
-        expect(exercise.getTitle()).toEqual("exercise");
+        expect(exercise.getTitle()).toEqual('exercise');
       });
     });
 
@@ -171,7 +171,7 @@ describe('utils/Exercise', () => {
       });
 
       it('returns text title', () => {
-        expect(exercise.getTitle()).toEqual("Exercise");
+        expect(exercise.getTitle()).toEqual('Exercise');
       });
     });
   });
@@ -222,7 +222,7 @@ describe('utils/Exercise', () => {
 
       it('works', () => {
         expect(exercise.lines).toEqual( [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]] );
-        expect(exercise.characters).toEqual([{"isCurrentChar": false, "lastTypedValue": null, "reference": "I"}, {"isCurrentChar": false, "lastTypedValue": null, "reference": "l"}, {"isCurrentChar": false, "lastTypedValue": null, "reference": " "}, {"isCurrentChar": false, "lastTypedValue": null, "reference": "é"}, {"isCurrentChar": false, "lastTypedValue": null, "reference": "t"}, {"isCurrentChar": false, "lastTypedValue": null, "reference": "a"}, {"isCurrentChar": false, "lastTypedValue": null, "reference": "i"}, {"isCurrentChar": false, "lastTypedValue": null, "reference": "t"}, {"isCurrentChar": false, "lastTypedValue": null, "reference": " "}, {"isCurrentChar": false, "lastTypedValue": null, "reference": "u"}, {"isCurrentChar": false, "lastTypedValue": null, "reference": "n"}, {"isCurrentChar": false, "lastTypedValue": null, "reference": "e"}, {"isCurrentChar": false, "lastTypedValue": null, "reference": " "}, {"isCurrentChar": false, "lastTypedValue": null, "reference": "f"}, {"isCurrentChar": false, "lastTypedValue": null, "reference": "o"}, {"isCurrentChar": false, "lastTypedValue": null, "reference": "i"}, {"isCurrentChar": false, "lastTypedValue": null, "reference": "s"}]);
+        expect(exercise.characters).toEqual([{'isCurrentChar': false, 'lastTypedValue': null, 'reference': 'I'}, {'isCurrentChar': false, 'lastTypedValue': null, 'reference': 'l'}, {'isCurrentChar': false, 'lastTypedValue': null, 'reference': ' '}, {'isCurrentChar': false, 'lastTypedValue': null, 'reference': 'é'}, {'isCurrentChar': false, 'lastTypedValue': null, 'reference': 't'}, {'isCurrentChar': false, 'lastTypedValue': null, 'reference': 'a'}, {'isCurrentChar': false, 'lastTypedValue': null, 'reference': 'i'}, {'isCurrentChar': false, 'lastTypedValue': null, 'reference': 't'}, {'isCurrentChar': false, 'lastTypedValue': null, 'reference': ' '}, {'isCurrentChar': false, 'lastTypedValue': null, 'reference': 'u'}, {'isCurrentChar': false, 'lastTypedValue': null, 'reference': 'n'}, {'isCurrentChar': false, 'lastTypedValue': null, 'reference': 'e'}, {'isCurrentChar': false, 'lastTypedValue': null, 'reference': ' '}, {'isCurrentChar': false, 'lastTypedValue': null, 'reference': 'f'}, {'isCurrentChar': false, 'lastTypedValue': null, 'reference': 'o'}, {'isCurrentChar': false, 'lastTypedValue': null, 'reference': 'i'}, {'isCurrentChar': false, 'lastTypedValue': null, 'reference': 's'}]);
       });
     });
 
@@ -261,7 +261,7 @@ describe('utils/Exercise', () => {
     beforeEach(() => {
       exercise = new Exercise({
         exercise: {
-          text: "Il était\n"
+          text: 'Il était\n'
         }
       });
       exercise.handleInputEvent('Il était\n');

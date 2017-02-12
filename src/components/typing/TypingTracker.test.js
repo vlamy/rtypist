@@ -5,7 +5,7 @@ import ReactTestUtils from 'react-addons-test-utils';
 import Exercise from '../../models/Exercise';
 
 const divClassName = 'rtypist__exercise-manager__typing-tracker';
-const data = require('../../../config/exercises/basic.json')
+const data = require('../../../config/exercises/basic.json');
 const exercise = new Exercise(data);
 
 it('renders without crashing', () => {
@@ -15,9 +15,9 @@ it('renders without crashing', () => {
 
 
 it(`renders a div with class ${divClassName} `, () => {
-    const renderer = ReactTestUtils.createRenderer();
-    renderer.render(<TypingTracker exercise={exercise}/>);
-    const result = renderer.getRenderOutput();
-    expect(result.type).toBe('div');
-    expect(result.props.className).toEqual(divClassName);
+  const renderer = ReactTestUtils.createRenderer();
+  renderer.render(<TypingTracker exercise={exercise}/>);
+  const result = renderer.getRenderOutput();
+  expect(result.type).toBe('div');
+  expect(result.props.className).toEqual(divClassName);
 });
