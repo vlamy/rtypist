@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './TypedCharacter.sass';
 
+const PropTypes = {
+  character: React.propTypes.object
+};
+
 /**
  * A component to render a character to type, with different style
  * according to the typing status of the character.
@@ -28,3 +32,5 @@ export default class TypedCharacter extends Component {
     );
   }
 }
+
+TypedCharacter.propTypes = PropTypes;

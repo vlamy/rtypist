@@ -1,4 +1,4 @@
-import TYPING_STATUS from '../constants/TYPING_STATUS';
+import * as TYPING_STATUS from '../constants/TYPING_STATUS';
 import Exercise from './Exercise';
 
 describe('utils/Exercise', () => {

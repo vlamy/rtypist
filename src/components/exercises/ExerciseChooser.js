@@ -24,6 +24,10 @@ const exercises = [
   new Exercise(ruby)
 ];
 
+const PropTypes = {
+  handleExerciseChoice: React.propTypes.func
+};
+
 export default class ExerciseChooser extends Component {
   render() {
     return (
@@ -43,3 +47,5 @@ export default class ExerciseChooser extends Component {
     );
   }
 }
+
+ExerciseChooser.propTypes = PropTypes;

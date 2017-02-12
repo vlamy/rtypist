@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './TypingDashboard.sass';
 
+const PropTypes = {
+  statistics: React.propTypes.object
+};
+
 /**
 */
 export default class TypingDashboard extends Component {
@@ -9,7 +13,7 @@ export default class TypingDashboard extends Component {
       <div className="rtypist__exercise-manager__typing-tracker__typing-dashboard">
         <div className="rtypist__exercise-manager__typing-tracker__typing-dashboard__statext">
           <div className="stats-txt accuracy">
-            <p>Accuracy : {this.props.statistics.getLiveAccuracy()}%</p>
+            <p>Accuracy : {this.props.statistics.getLiveAccuracy()}%</p>
           </div>
           <div className="stats-txt errorCount">
             <p>Errors : {this.props.statistics.getLiveErrorCount()}</p>
@@ -25,3 +29,5 @@ export default class TypingDashboard extends Component {
       );
   }
 }
+
+TypingDashboard.propTypes = PropTypes;

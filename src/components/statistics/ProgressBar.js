@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './ProgressBar.sass';
 
+const PropTypes = {
+  statistics: React.propTypes.object
+};
+
 /**
 */
 export default class ProgressBar extends Component {
@@ -12,3 +16,5 @@ export default class ProgressBar extends Component {
       );
   }
 }
+
+ProgressBar.propTypes = PropTypes;

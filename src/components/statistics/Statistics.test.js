@@ -1,7 +1,7 @@
 import Statistics from './Statistics';
 import Exercise from '../../models/Exercise';
 
-const data = require('../../../config/exercises/basic.json')
+const data = require('../../../config/exercises/basic.json');
 const exercise = new Exercise(data);
 let statistics;
 

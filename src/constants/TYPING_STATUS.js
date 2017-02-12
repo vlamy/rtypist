@@ -1,6 +1,4 @@
-module.exports = {
-  togo: 'to-go',
-  current: 'current',
-  error: 'error',
-  success: 'success'
-};
+export const togo  = 'to-go';
+export const current  = 'current';
+export const error  = 'error';
+export const success  = 'success';
