@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './TypedCharacter.sass';
 
 const PropTypes = {
-  character: React.propTypes.object
+  character: React.PropTypes.object
 };
 
 /**

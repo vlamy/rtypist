@@ -6,8 +6,8 @@ import TypingDashboard from '../statistics/TypingDashboard';
 import ProgressBar from '../statistics/ProgressBar';
 
 const PropTypes = {
-  exercise: React.propTypes.object,
-  endCallback: React.proptypes.func
+  exercise: React.PropTypes.object,
+  endCallback: React.PropTypes.func
 };
 
 export default class TypingTracker extends Component {

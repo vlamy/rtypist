@@ -1,7 +1,14 @@
 import Statistics from './Statistics';
 import Exercise from '../../models/Exercise';
 
-const data = require('../../../config/exercises/basic.json');
+const data = {
+  exercise: {
+    title: 'Basic exercise',
+    tags: ['fr', 'easy'],
+    desription: 'A good exercise for testing the typist',
+    text: 'Il était une fois'
+  }
+};
 const exercise = new Exercise(data);
 let statistics;
 

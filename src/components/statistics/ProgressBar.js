@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './ProgressBar.sass';
 
 const PropTypes = {
-  statistics: React.propTypes.object
+  statistics: React.PropTypes.object
 };
 
 /**
@@ -13,7 +13,7 @@ export default class ProgressBar extends Component {
       <div className="rtypist__exercise-manager__typing-tracker__progress-bar">
         <span style={{ width: `${this.props.statistics.getLiveProgress()}%` }}></span>
       </div>
-      );
+    );
   }
 }
 

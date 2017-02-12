@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './TypingDashboard.sass';
 
 const PropTypes = {
-  statistics: React.propTypes.object
+  statistics: React.PropTypes.object
 };
 
 /**
@@ -26,7 +26,7 @@ export default class TypingDashboard extends Component {
           </div>
         </div>
       </div>
-      );
+    );
   }
 }
 
