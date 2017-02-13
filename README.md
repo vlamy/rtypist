@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/vlamy/rtypist.svg?branch=master)](https://travis-ci.org/vlamy/rtypist)
 
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+
 R-Typist is intended to be a typist (tool to train your keyboard typing skills),
 designed with customizability and simplicity in mind.
 
